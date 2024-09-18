@@ -71,7 +71,7 @@ strong {
 }
 
 .warning {
-	background-color: #FBB8C4;
+	background-color: rgb(255, 237, 138);
 	padding:10px;
 	border-radius:20px;
 }
