@@ -26,6 +26,15 @@ h1 {
 	font-style: normal;
  }
 
+ footer {
+	padding: 20px;
+	margin: 0 auto;
+	width: 75%;
+	text-align: left;
+	font-size: 80%;
+	color: #A05050;
+ }
+
 /* styles for the "wrapper" div, notice that "wrapper" is preceded by "#" */
 #wrapper {
 	width: 85%;
