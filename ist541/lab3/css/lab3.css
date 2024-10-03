@@ -1,0 +1,17 @@
+body {
+	text-align: center;
+	background-color: papayawhip;  
+}
+
+a {
+	padding: 15px;
+    margin: 3px;
+	font-size: 125%;
+	background-color:  darkslategrey; 
+	color:  white; 
+}
+a:hover {
+	font-size:200%;
+	background-color: brown; 
+	color: fuchsia; 
+}
