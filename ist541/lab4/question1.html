@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Surviving Killer Robots Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="question1.html">Question 1</a></li>
+                <li><a href="question2.html">Question 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img id="robot-image" src="images/attack-1.jpg" alt="robot">
+        <div id="robot-reaction"></div>
+        <h2>Question 1</h2>
+        <p>A robot is attacking you. You are trapped in a room with no escape. What do you do?</p>
+        <button onclick="checkAnswer(1)">Dump Tar on the Robot</button>
+        <button onclick="checkAnswer(2)">Deploy the Magnets</button>
+        <button onclick="checkAnswer(3)">Release the Metal Fog</button>
+        <button onclick="checkAnswer(4)">Spray the Robot's Sensors</button>
+        <button id="run-away" onclick="nextQuestion()" style="visibility: hidden;">Run Away</button>
+
+    </main>
+
+    <script>
+        function checkAnswer(answer) {
+            switch (answer) {
+                case 1:
+                    $('#robot-image').attr('src', 'images/tar-2.jpg');
+                    $('#robot-reaction').text('The tar is sticky and slows the robot down, but it doesn\'t stop the robot.');
+                    cantRunAway();
+                    break;
+                case 2:
+                    $('#robot-image').attr('src', 'images/magnets-2.jpg');
+                    $('#robot-reaction').text('The magnets attract the robot\'s metal parts, causing it to malfunction.');
+                    readyToRunAway();
+                    break;
+                case 3:
+                    $('#robot-image').attr('src', 'images/metal-cloud-2.jpg');
+                    $('#robot-reaction').text('The metal fog disrupts the robot\'s electronics, causing it to freeze.');
+                    readyToRunAway();
+                    break;
+                case 4:
+                    $('#robot-image').attr('src', 'images/spray-2.jpg');
+                    $('#robot-reaction').text('The spray disables the robot\'s sensors, but it doesn\'t destroy the robot.');
+                    cantRunAway();
+                    break;
+                default:
+            }
+        }
+
+        function cantRunAway() {
+            $('#run-away').prop('style', 'background-color: #888; color: #666;');
+            $('#run-away').hide();
+        }
+
+        function readyToRunAway() {
+            $('#run-away').show();
+            $('#run-away').prop('style', 'background-color: #deb613; color: #333;');
+        }
+
+        function nextQuestion() {
+            window.location.href = 'question2.html';
+        }
+    </script>
+
+
+</body>
+</html>
