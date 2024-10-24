@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000000;
+	font-size: 14px;
+	font-family: 'Noto Sans TC', sans-serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+header {
+    text-align: center;
+	background-color: #232222;	
+	padding: 10px;
+	position: sticky;
+	top: 0;
+}
+
+header nav {
+	margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+	padding: 0 10px;
+}
+
+a {
+    color: #a52b2b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+	color: #ebc426;
+}
+		
+main {
+	margin:0 auto;         /* centers wrapper */
+	width: 80%;
+	display: inline-flex;
+}
+
+.audio-item {
+	margin: 20px auto;
+	background-color: white;  /* sets background color for table cells*/
+	color: #000;
+	text-align: left;
+	padding: 10px;
+	border: 10px solid #3c3a3a;
+	border-radius: 10px;
+	max-width: 800px;
+}
+
+.audio-item img {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+.audio-item audio {
+	width: 100%;
+}
+
+.video-item {
+	margin: 20px auto;
+	background-color: white;  /* sets background color for table cells*/
+	color: #000;
+	text-align: left;
+	padding: 10px;
+	border: 10px solid #3c3a3a;
+	border-radius: 10px;
+	max-width: 800px;
+}
+
+.video-item video {
+	width: 100%;
+	height: auto;
+}
+
+h1, h2 { 
+	text-align:center;
+	color: #fff;
+}
+
+
+.splash {
+	margin: 20px auto;
+	border: 3px solid #3c3a3a;
+	border-radius: 10px;
+	padding: 5px;
+	max-width: 768px;
+	height: auto;
+	width: 80%;
+}
