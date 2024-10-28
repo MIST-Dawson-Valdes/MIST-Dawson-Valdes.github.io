@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My Pet Rock</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Newsreader Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Jaro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    
+    <!-- Inter Tight Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <header>    
+        <h1> My Pet Rock! </h1>
+        <nav>
+            <ul>
+                <li><button onclick="goToPage('index')">Home</button></li>
+                <li><button onclick="goToPage('history')">History</button></li>
+                <li><button onclick="goToPage('facts')">Facts</button></li>
+                <li><button onclick="goToPage('games')">Games</button></li>
+                <li><button onclick="goToPage('crafting')">Crafting</button></li>
+                <li><button onclick="goToPage('training')">Training</button></li>
+                <li><button onclick="goToPage('gallery')">Gallery</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <h2>Facts</h2>
+            
+            <div class="container">
+                <div class="details-content">
+                    <ul class="details-list-ul">
+                        <li>Common Name: Pet Rock</li>
+                        <li>Average Size: 2–5 inches in diameter</li>
+                        <li>Weight: 200–500 grams</li>
+                        <li>Lifespan: Indefinite (eternal, barring erosion or extreme circumstances)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <details closed>  
+                <summary>Anatomy</summary>
+                <figure>
+                    <img src="images/pet-rock-anatomy.png" alt="Anatomy">
+                    <figcaption>Anatomy of a Pet Rock</figcaption>
+                </figure>
+                <div class="details-content">
+                    <ol class="details-list-ol">
+                        <li>Calm Core – The emotional center that keeps the rock perpetually relaxed.</li>
+                        <li>Obedient Structure – Ensures the rock always stays where you put it (no wandering off).</li>
+                        <li>Sedentary Surface – A smooth or rough exterior designed for maximum inactivity.</li>
+                        <li>Zero-Maintenance Coat – No grooming required; dust and dirt are considered fashionable accessories.</li>
+                        <li>Loyal Layer – Always by your side, but won’t demand walks or belly rubs.</li>
+                        <li>Unblinking Eyes – Though invisible, these never get tired of staring into the void of eternity.</li>
+                        <li>Weighty Personality – Subtle, yet undeniably present in every conversation.</li>
+                        <li>Smooth Communication Skills – Silent, but speaks volumes through its steadfast nature.</li>
+                        <li>Invisible Heart of Stone – Unyielding, metaphorically and literally.</li>
+                    </ol>
+                </div>
+            </details>
+
+            <details closed>
+                <summary>Zoological Chart</summary>
+                <div class="details-content">
+                    <h3>Lapidus domestica</h3>
+                    <ul class="details-list-ul">
+                        <li>Kingdom: Mineralia</li>
+                        <li>Phylum: Lithophyta</li>
+                        <li>Class: Sedentaria</li>
+                        <li>Order: Inanimata</li>
+                        <li>Family: Geologia</li>
+                        <li>Genus: Lapidus</li>
+                        <li>Species: Lapidus domestica</li>
+                    </ul>
+                </div>
+            </details>  
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Pet Rock</p>
+    </footer>
+    
+    <script>
+        function goToPage(page) {
+            window.location.href = page + ".html";
+        }
+    </script>
+</body>
+</html>

@@ -28,7 +28,8 @@
 
         <nav><ul>
             <li><button onclick="goToPage('index')">Home</button></li>
-            <li><button onclick="goToPage('about')">About</button></li>
+            <li><button onclick="goToPage('history')">History</button></li>
+            <li><button onclick="goToPage('facts')">Facts</button></li>
             <li><button onclick="goToPage('games')">Games</button></li>
             <li><button onclick="goToPage('crafting')">Crafting</button></li>
             <li><button onclick="goToPage('training')">Training</button></li>
@@ -47,8 +48,10 @@
             <img src="images/pet-rock-03.png" alt="Pet Rock">
         </div>
         <nav><ul>
-            <li><button onclick="galleryNext()"> Next </button></li>
-            <li><button onclick="galleryBack()"> Back </button></li>
+            
+            <li><button onclick="galleryBack()"> <span class="gallery-arrow"> &lt; </span> Back </button></li>
+            <li><button onclick="galleryNext()"> Next <span class="gallery-arrow"> &gt; </span> </button></li>
+
         </ul></nav>
 
     </main>

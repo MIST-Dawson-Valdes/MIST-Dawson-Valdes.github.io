@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
 
 </head>
 <body>
@@ -52,7 +53,15 @@
         <p>&copy; 2024 My Pet Rock</p>
     </footer>
     
+
+    <script src="js/imageMapResizer.min.js"></script>
     <script>
+        // Resize the image map when the window is resized
+        $('map').imageMapResize();
+        $(window).on('resize', function () {
+            $('map').imageMapResize();
+        });
+
         function goToPage(page) {
             window.location.href = page + ".html";
         }
@@ -64,6 +73,8 @@
                 alert("You found a " + answer + ". Try again.");
             }
         }
+
+
     </script>
 </body>
 </html>
