@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet Rock</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Newsreader Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <!-- Jaro Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <!-- Inter Tight Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+</head>
+
+<body>
+
+    <header>    
+
+        <h1>My Pet Rock</h1>
+
+        <nav><ul>
+            <li><button onclick="goToPage('index')">Home</button></li>
+            <li><button onclick="goToPage('about')">About</button></li>
+            <li><button onclick="goToPage('games')">Games</button></li>
+            <li><button onclick="goToPage('crafting')">Crafting</button></li>
+            <li><button onclick="goToPage('training')">Training</button></li>
+            <li><button onclick="goToPage('gallery')">Gallery</button></li>
+        </ul></nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Rock Gallery</h2>
+        <p>Here are some of the rocks that I have found.</p>
+        
+        <div class="gallery-item">
+            <img src="images/pet-rock-03.png" alt="Pet Rock">
+        </div>
+        <nav><ul>
+            <li><button onclick="galleryNext()"> Next </button></li>
+            <li><button onclick="galleryBack()"> Back </button></li>
+        </ul></nav>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Pet Rock</p>
+    </footer>
+    
+    <script>
+
+        let galleryID = 1;
+        const galleryMax = 8;
+        const galleryMin = 0;
+        const galleryItem = $(".gallery-item")[0];
+        const galleryArray = [ {filename:"IMG_1374.MOV", type:'video'}, {filename:"IMG_1375.jpeg", type:'image'}, {filename:"IMG_1377.jpeg", type:'image'}, {filename:"IMG_1378.MOV", type:'video'}, {filename:"IMG_1380.jpeg", type:'image'}, {filename:"IMG_1381.jpeg", type:'image'}, {filename:"IMG_1382.jpeg", type:'image'}, {filename:"IMG_1383.jpeg", type:'image'}, {filename:"IMG_1384.jpeg", type:'image'} ];
+
+        function galleryNext() {
+            galleryID++;
+            if (galleryID > galleryMax) {
+                galleryID = galleryMin;
+            }
+            changeGalleryItem(galleryArray[galleryID]);
+        }
+
+        function galleryBack() {
+            galleryID--;
+            if (galleryID < galleryMin) {
+                galleryID = galleryMax;
+            }
+            changeGalleryItem(galleryArray[galleryID]);
+        }
+
+        function changeGalleryItem(item) {
+            switch (item.type) {
+                case 'video':
+                    galleryItem.innerHTML = "<iframe src='gallery/" + item.filename + "' title='Pet Rock' allow='fullscreen'></iframe>";
+                    break;
+                case 'image':
+                    galleryItem.innerHTML = "<img src='gallery/" + item.filename + "' alt='Pet Rock'>";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function goToPage(page) {
+            window.location.href = page + ".html";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Pet Rock</title>
@@ -14,38 +16,47 @@
     <!-- Inter Tight Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 
 </head>
+
 <body>
+    
     <header>    
+    
         <h1>My Pet Rock</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">About</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#facts">Facts</a></li>
-            </ul>
-        </nav>
+    
+        <nav><ul>
+    
+            <li><button onclick="goToPage('index')">Home</button></li>
+            <li><button onclick="goToPage('about')">About</button></li>
+            <li><button onclick="goToPage('games')">Games</button></li>
+            <li><button onclick="goToPage('crafting')">Crafting</button></li>
+            <li><button onclick="goToPage('training')">Training</button></li>
+            <li><button onclick="goToPage('gallery')">Gallery</button></li>
+    
+        </ul></nav>
+    
     </header>
-    <main>
-        <section id="about">
-            <h2>About My Pet Rock</h2>
-            <p>My pet rock is a small, green rock that I found in the park. I named him "Greenie" because he is green.</p>
-        </section>
-        <section id="history">
-            <h2>History</h2>
-            <p>Gary Dahl was an advertising executive who became famous in 1975 for creating one of the most peculiar and successful novelty items in history: the Pet Rock. The idea struck Dahl during a conversation with friends about the hassles of pet ownership. Jokingly, he suggested that the easiest pet would be a rock—it didn’t need to be fed, walked, or cleaned up after. This humorous concept evolved into a fully developed product, with Dahl packaging ordinary rocks in a cardboard box complete with breathing holes and a tongue-in-cheek training manual.</p>
-            <p>The simplicity and absurdity of the Pet Rock made it an instant hit. At the time, novelty and gag gifts were popular, and Dahl’s clever marketing tapped into the public’s sense of humor. The Pet Rock became a cultural phenomenon, selling over a million units in just six months. Despite being nothing more than a smooth stone from Mexico, the Pet Rock’s playful packaging and the accompanying “care guide” created the illusion that it was a real, manageable pet. The concept appealed to consumers who were looking for a laugh or an inexpensive gift, and at $3.95 each, it was a low-risk purchase.</p>
-            <p>Gary Dahl’s success with the Pet Rock was fleeting but remarkable. While the craze only lasted about six months, it earned him millions of dollars and secured his place in pop culture history. Despite some criticism for the gimmicky nature of the product, Dahl viewed it as a creative and entrepreneurial success, demonstrating the power of humor and clever marketing. Although Dahl later returned to advertising and writing, the Pet Rock remains his legacy as a testament to the whimsical and sometimes surprising nature of consumer trends.</p>
-        </section>
-        <section id="facts">
-            <h2>Facts</h2>
-            <p>Greenie is a member of the "Greenie" species of rock. He is a member of the "Greenie" species of rock.</p>
-        </section>
-    </main>
+
+    <div class="video-item">
+        <iframe src="https://www.youtube-nocookie.com/embed/7Bxw4kkeHJ8?si=1Bf1ZrWcA1WMWtnX"
+        title="What is a Rock?"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+
     <footer>
-        <p>&copy; 2023 My Pet Rock</p>
+        <p>&copy; 2024 My Pet Rock</p>
     </footer>
+    
+    <script>
+        function goToPage(page) {
+            window.location.href = page + ".html";
+        }
+    </script>
+
 </body>
 </html>
