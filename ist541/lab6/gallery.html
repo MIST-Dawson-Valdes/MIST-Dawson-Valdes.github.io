@@ -88,10 +88,10 @@
         function changeGalleryItem(item) {
             switch (item.type) {
                 case 'video':
-                    galleryItem.innerHTML = `<iframe src="gallery/${item.filename}" title="Pet Rock" allow="fullscreen"></iframe>`;
+                    galleryItem.html( `<video src="gallery/${item.filename}" title="Pet Rock" allow="fullscreen"></video>` );
                     break;
                 case 'image':
-                    galleryItem.innerHTML = `<img src="gallery/${item.filename}" alt="Pet Rock">`;
+                    galleryItem.html( `<img src="gallery/${item.filename}" alt="Pet Rock">` );
                     break;
                 default:
                     break;
